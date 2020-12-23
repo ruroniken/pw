@@ -34,3 +34,9 @@ sr.reveal('.home__title',{})
 sr.reveal('.home__subtitle',{delay: 50})
 sr.reveal('.button',{delay: 100})
 sr.reveal('.home__social-icon',{interval: 200})
+
+
+//scroll about
+sr.reveal('.about__img',{})
+sr.reveal('.about__subtitle',{delay: 10})
+sr.reveal('.about__data',{delay: 200})
