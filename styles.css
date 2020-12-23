@@ -1,0 +1,217 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+/* css variables */
+:root{
+    --header-height: 3rem;
+    --font-semi: 600;
+    --font-bold: 700;
+}
+/* colors */
+:root{
+    --extra-color:#E55947;
+    --dark-color:#131313;
+    --white-color: #ffffff;
+    --dark-color-light: #606060;
+    --gray-color: #F0F1F3;
+}
+/* fonts and typography */
+:root{
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --big-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .75rem;
+}
+/* above 768px */
+@media screen and (min-width: 768px){
+    :root{
+        --big-font-size: 5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .813rem;   
+    }
+}
+/* margins */
+:root{
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+}
+:root{
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+/* BASE */
+*,::before::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+h1, h2, p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* class css */
+.section{
+    padding: 3rem 0;
+}
+.section-title{
+    text-align: center;
+    font-size: var(--h2-font-size);
+    color: var(--white-color);
+    margin: var(--mb-4) 0 var(--mb-1);    
+}
+.section-all{
+    display: block;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi);
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
+/* layout */
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 3rem);
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-3);
+}
+.l-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--dark-color);
+}
+/* NAV */
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* below 768px */
+@media screen and (max-width: 768px){
+    .nav__menu{
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 35%;
+        height: 100%;
+        padding: 2rem;
+        background-color: var(--dark-color);
+        transition: .5s;
+    }
+}
+.nav__toggle{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.nav__item{
+    margin-bottom: var(--mb-4);
+}
+.nav__link{
+    color: var(--white-color);
+    font-weight: var(--font-semi);
+}
+.nav__link:hover{
+    color: var(--extra-color);
+}
+.nav__logo{
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+/* show menu*/
+.show{
+    right: 0;
+}
+/* active */
+.active{
+    color: var(--extra-color);
+}
+/* home */
+.home{
+    row-gap: 1rem;
+    background-color: var(--dark-color);
+}
+.home__container{
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - var(--header-height));
+}
+.home__data{
+    color: var(--white-color);
+    padding-top: 6rem;
+}
+.home__title{
+    align-self: center;
+    text-transform: uppercase;
+    font-size: var(--big-font-size);
+}
+.home__subtitle{
+    font-size: var(--normal-font-size);
+    color: #fafafa;
+}
+.home__social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.home__social-icon{
+    text-align: center;
+    width: max-content;
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+    font-size: 1.5rem;
+    color: #fafafa;
+}
+.home__social-icon:hover{
+    color: var(--extra-color);
+}
+/* Buttons */
+.button{
+    display: inline-block;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    padding: .75rem 2.5rem;
+    font-weight: var(--font-semi);
+    border-radius: .5rem;
+    font-size: var(--normal-font-size);
+    margin: var(--mb-4) 0;
+}
+.button:hover{
+    background-color: #fafafa;
+}
+.blur__background{
+    background: rgba(0, 0, 0, .5);
+}
