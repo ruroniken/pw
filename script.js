@@ -21,3 +21,16 @@ function linkAction() {
     nav.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+})
+
+//scroll home
+sr.reveal('.home__title',{})
+sr.reveal('.home__subtitle',{delay: 50})
+sr.reveal('.button',{delay: 100})
+sr.reveal('.home__social-icon',{interval: 200})
